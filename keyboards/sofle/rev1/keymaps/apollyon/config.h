@@ -44,7 +44,9 @@
 #define RGB_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
-    #define RGBLED_NUM 72
+  #undef RGBLIGHT_LED_COUNT
+  #define RGBLIGHT_LED_COUNT 72
+  
 	#define RGBLED_SPLIT { 36, 36 } // haven't figured out how to use this yet
 
     #define RGBLIGHT_LIMIT_VAL 128
