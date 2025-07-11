@@ -247,8 +247,11 @@ static void print_status_narrow(void) {
 
 
     switch (get_highest_layer(default_layer_state)) {
-        case _QWERTY:
-            oled_write_ln_P(PSTR("Qwrt"), false);
+        case _BASE:
+            oled_write_ln_P(PSTR("Base"), false);
+            break;
+        case _GAME1:
+            oled_write_ln_P(PSTR("Game1"), false);
             break;
 
         default:
@@ -305,25 +308,6 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         } else {
             tap_code(KC_VOLU);
         }
-    } else if (index == 1) {
-        switch (get_highest_layer(layer_state)) {
-            case _QWERTY:
-            case _RAISE:
-            case _LOWER:
-                if (clockwise) {
-                    tap_code(KC_DOWN);
-                } else {
-                    tap_code(KC_UP);
-                }
-                break;
-            default:
-                if (clockwise) {
-                    tap_code(KC_WH_D);
-                } else {
-                    tap_code(KC_WH_U);
-                }
-                break;
-		}
     }
     return true;
 }
