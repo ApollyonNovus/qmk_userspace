@@ -20,7 +20,7 @@
 #include QMK_KEYBOARD_H
 
 #define INDICATOR_BRIGHTNESS 30
-
+/*
 #define HSV_OVERRIDE_HELP(h, s, v, Override) h, s , Override
 #define HSV_OVERRIDE(hsv, Override) HSV_OVERRIDE_HELP(hsv,Override)
 
@@ -61,7 +61,7 @@
 	  {35+ 7, 4, hsv}, \
 		{25, 2, hsv}, \
 	  {35+ 25, 2, hsv}
-
+*/
 
 enum sofle_layers {
     _BASE = 0,
@@ -114,9 +114,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         //|-------+--------+--------+--------+--------+--------|                                     |-------+--------+--------+--------+--------+--------|
             _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_KB_VOLUME_UP,                              XXXXXXX,   KC_P7,   KC_P8,   KC_P9, KC_PPLS, XXXXXXX,
         //|-------+--------+--------+--------+--------+--------|                                     |--------+-------+--------+--------+--------+--------|
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE,                                      XXXXXXX,   KC_P4,   KC_P5,   KC_P6, KC_PENT, KC_PENT,
+            UG_HUEU, UG_SATU, UG_VALU, XXXXXXX, XXXXXXX, KC_MUTE,                                      XXXXXXX,   KC_P4,   KC_P5,   KC_P6, KC_PENT, KC_PENT,
         //|-------+--------+--------+--------+--------+--------|  ====  |                   |  ====  |--------+-------+--------+--------+--------+--------|
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_KB_VOLUME_DOWN, XXXXXXX,          XXXXXXX, XXXXXXX,   KC_P1,   KC_P2,   KC_P3, KC_PENT, KC_PENT,
+            UG_HUED, UG_SATD, UG_VALD, XXXXXXX, XXXXXXX, KC_KB_VOLUME_DOWN, XXXXXXX,          XXXXXXX, XXXXXXX,   KC_P1,   KC_P2,   KC_P3, KC_PENT, KC_PENT,
         //|-------+--------+--------+--------+--------+--------|  ====  |                   |  ====  |--------+-------+--------+--------+--------+--------|
                         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                               XXXXXXX,   KC_P0,   KC_P0, KC_PDOT, KC_PENT
         //            \--------+--------+--------+---------+-------|                             |--------+--------+--------+--------+-------/
@@ -248,12 +248,11 @@ static void print_status_narrow(void) {
 
     switch (get_highest_layer(default_layer_state)) {
         case _BASE:
-            oled_write_ln_P(PSTR("Base"), false);
+            oled_write_ln_P(PSTR("Base "), false);
             break;
         case _GAME1:
-            oled_write_ln_P(PSTR("Game1"), false);
+            oled_write_ln_P(PSTR("Game"), false);
             break;
-
         default:
             oled_write_ln_P(PSTR("Undef"), false);
     }
@@ -262,13 +261,13 @@ static void print_status_narrow(void) {
     oled_write_ln_P(PSTR("LAYER"), false);
     switch (get_highest_layer(layer_state)) {
         case _BASE:
-            oled_write_P(PSTR("Base"), false);
+            oled_write_P(PSTR("Base "), false);
             break;
         case _NAV:
-            oled_write_P(PSTR("Nav"), false);
+            oled_write_P(PSTR("Nav  "), false);
             break;
         case _NUM:
-            oled_write_P(PSTR("Num"), false);
+            oled_write_P(PSTR("Num  "), false);
             break;
         case _GAME1:
             oled_write_P(PSTR("Game1"), false);

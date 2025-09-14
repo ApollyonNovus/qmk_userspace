@@ -23,9 +23,9 @@
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
 
 
-#define MASTER_LEFT
+// #define MASTER_LEFT
 // #define MASTER_RIGHT
-// #define EE_HANDS
+#define EE_HANDS
 
 #define CUSTOM_FONT
 
@@ -49,18 +49,20 @@
   
 	#define RGBLED_SPLIT { 36, 36 } // haven't figured out how to use this yet
 
-    #define RGBLIGHT_LIMIT_VAL 128
-    #define RGBLIGHT_HUE_STEP 24
-    #define RGBLIGHT_SAT_STEP 16
-    #define RGBLIGHT_VAL_STEP 16
+  #define RGBLIGHT_LIMIT_VAL 128
+  #define RGBLIGHT_HUE_STEP 24
+  #define RGBLIGHT_SAT_STEP 16
+  #define RGBLIGHT_VAL_STEP 16
 
-    #define RGBLIGHT_SLEEP
-    // #define RGBLIGHT_LAYERS
+  #define RGBLIGHT_SLEEP
+  // #define RGBLIGHT_LAYERS
 
-    // #define RGBLIGHT_DEFAULT_HUE 148
-    // #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_RGB_TEST
+  #define RGBLIGHT_DEFAULT_HUE 138
+  #define RGBLIGHT_DEFAULT_SAT 255
+  #define RGBLIGHT_DEFAULT_VAL 64 // Max 128
+  // #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_RGB_TEST
 
-    #define RGBLIGHT_ANIMATIONS
+  // #define RGBLIGHT_ANIMATIONS
 	// #define RGBLIGHT_EFFECT_BREATHING
 	// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 	// #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
