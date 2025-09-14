@@ -27,18 +27,17 @@
 // #define MASTER_RIGHT
 #define EE_HANDS
 
-#define CUSTOM_FONT
+// #define CUSTOM_FONT
 
-#define CUSTOM_LAYER_READ //if you remove this it causes issues - needs better guarding
+// #define CUSTOM_LAYER_READ //if you remove this it causes issues - needs better guarding
 
 
-#define TAPPING_FORCE_HOLD
-#ifdef TAPPING_TERM
-    #undef TAPPING_TERM
-    #define TAPPING_TERM 200
-#endif
-#define ENCODER_DIRECTION_FLIP
-
+// #define TAPPING_FORCE_HOLD
+// #ifdef TAPPING_TERM
+//     #undef TAPPING_TERM
+//     #define TAPPING_TERM 200
+// #endif
+// #define ENCODER_DIRECTION_FLIP
 
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
@@ -49,29 +48,15 @@
   
 	#define RGBLED_SPLIT { 36, 36 } // haven't figured out how to use this yet
 
-  #define RGBLIGHT_LIMIT_VAL 128
+  #define RGBLIGHT_LIMIT_VAL 200
   #define RGBLIGHT_HUE_STEP 24
   #define RGBLIGHT_SAT_STEP 16
   #define RGBLIGHT_VAL_STEP 16
 
   #define RGBLIGHT_SLEEP
-  // #define RGBLIGHT_LAYERS
 
-  #define RGBLIGHT_DEFAULT_HUE 138
+  #define RGBLIGHT_DEFAULT_HUE 128
   #define RGBLIGHT_DEFAULT_SAT 255
-  #define RGBLIGHT_DEFAULT_VAL 64 // Max 128
-  // #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_RGB_TEST
-
-  // #define RGBLIGHT_ANIMATIONS
-	// #define RGBLIGHT_EFFECT_BREATHING
-	// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-	// #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-	// #define RGBLIGHT_EFFECT_SNAKE
-	// #define RGBLIGHT_EFFECT_KNIGHT
-	// #define RGBLIGHT_EFFECT_CHRISTMAS
-	// #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-	// #define RGBLIGHT_EFFECT_RGB_TEST
-	// #define RGBLIGHT_EFFECT_ALTERNATING
-	// #define RGBLIGHT_EFFECT_TWINKLE
+  #define RGBLIGHT_DEFAULT_VAL 200 // Max 128
 
 #endif
