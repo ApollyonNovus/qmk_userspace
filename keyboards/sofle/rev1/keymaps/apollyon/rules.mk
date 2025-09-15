@@ -1,7 +1,8 @@
+BOOTMAGIC_ENABLE = yes
 MOUSEKEY_ENABLE = no
 EXTRAKEY_ENABLE = yes
 CONSOLE_ENABLE = no 
-ENCODER_ENABLE = yes
+# ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 LTO_ENABLE = yes
 OLED_ENABLE = yes
@@ -10,6 +11,5 @@ VIA_ENABLE = yes
 
 RGBLIGHT_ENABLE = yes
 
-# RGB_MATRIX_ENABLE = yes
-# RGB_MATRIX_DRIVER = WS2812
-# RGB_MATRIX_CUSTOM_USER = no //only need this if using custom effects
+# Couldn't get RGB Matrix working with VIA, so disabling for now
+# info.json doesn't seem to work inside userspace repos

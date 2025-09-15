@@ -39,6 +39,8 @@
 // #endif
 // #define ENCODER_DIRECTION_FLIP
 
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
+
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
 
@@ -57,6 +59,6 @@
 
   #define RGBLIGHT_DEFAULT_HUE 128
   #define RGBLIGHT_DEFAULT_SAT 255
-  #define RGBLIGHT_DEFAULT_VAL 200 // Max 128
+  #define RGBLIGHT_DEFAULT_VAL 128 // Max 128
 
 #endif
